@@ -7,7 +7,7 @@ export const Product = () => {
         title: "Producto 1",
         description: "Descripcion",
         price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
+        imageUrl: "https://falabella.scene7.com/is/image/Falabella/gsc_113648488_712232_1?wid=240&hei=240&qlt=70&fmt=webp"
     }, {
         id: "2",
         title: "Producto 1",

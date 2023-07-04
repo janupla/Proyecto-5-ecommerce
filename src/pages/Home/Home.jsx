@@ -7,13 +7,13 @@ export function Home() {
     const { user, verifyingToken, authStatus } = userCtx
 
     return (
-        <Container>
+        <Container fluid>
             <h1>{`Bienvenido ${user?.fullName || "sin nombre"}`}</h1>
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://png.pngtree.com/thumb_back/fw800/background/20230407/pngtree-bay-area-has-beautiful-natural-scenery-in-summer-image_2144433.jpg"
+                        src="../src/assets/cuentodehadas.jpg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -24,7 +24,7 @@ export function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://st.depositphotos.com/1679308/1622/i/600/depositphotos_16225575-stock-photo-landscape-of-croatian-nature.jpg"
+                        src="../src/assets/goleman.jpg"
                         alt="Second slide"
                     />
 
@@ -36,7 +36,7 @@ export function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        src="../src/assets/violeta.jpg"
                         alt="Third slide"
                     />
 
@@ -49,5 +49,6 @@ export function Home() {
                 </Carousel.Item>
             </Carousel>
         </Container>
-    )
-}
+    )}
+
+
