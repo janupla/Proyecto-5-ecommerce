@@ -1,5 +1,5 @@
-const userReducers = (globalState, action) => {
-    const { type, payload } = action
+const userReducers = (globalState, action) => { //operaciones encargadas asociadas al estado que se encargan de actualizarlo, esa es su función
+    const { type, payload } = action //acción se puede  ver como evento
     switch (type) {
         case "LOGIN_EXITOSO":
             localStorage.setItem("token", payload.token)
@@ -10,9 +10,9 @@ const userReducers = (globalState, action) => {
 
         case "REGISTRO_EXITOSO":
             localStorage.setItem("token", payload.token)
-            return {
-                ...globalState,
-                authStatus: true
+            return {                 //el punto punto integra las propiedades de un objeto a otro objeto, 
+                ...globalState,        //mantengo el estado global
+                authStatus: true       //pero actualizo el estado a true (eso está en userState)
             }
 
         case "OBTENER_USUARIO":

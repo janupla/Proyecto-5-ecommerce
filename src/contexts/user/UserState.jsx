@@ -3,13 +3,13 @@ import axiosClient from "../../config/axios.jsx";
 import UserContext from './UserContext.jsx';
 import userReducers from './UserReducer.jsx';
 const UserState = (props) => {
-    const initialState = {
+    const initialState = { //estado inicial
         user: {
             _id: null,
             fullName: null,
             email: null
         },
-        authStatus: false
+        authStatus: false //el usuario está o no autenticado
     }
 
     const [globalState, dispatch] = useReducer(userReducers, initialState)
@@ -17,8 +17,8 @@ const UserState = (props) => {
     const registerUser = async (dataForm) => {
         try {
             const res = await axiosClient.post("/auth/signup", dataForm)
-            const payload = res.data // {token: "..."}
-            dispatch({
+            const payload = res.data // {token: "..."} payload carga la data
+            dispatch({ //dispara
                 type: "REGISTRO_EXITOSO",
                 payload: payload
             })
@@ -71,7 +71,7 @@ const UserState = (props) => {
     }
 
     return (
-        <UserContext.Provider value={{
+        <UserContext.Provider value={{ // provider: permite vincular a la app de react, renderiza directamente los hijos
             ...globalState,
             registerUser,
             loginUser,
