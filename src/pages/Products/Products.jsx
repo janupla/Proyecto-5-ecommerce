@@ -6,7 +6,6 @@ import UserContext from '../../contexts/user/UserContext.jsx'
 export const Products = () => {
     const userCtx = useContext(UserContext)
     const { user } = userCtx
-    const { fullName } = user
     //llama a la api para ver productos (/products)
     const products = [{
         id: "1",
@@ -49,7 +48,7 @@ export const Products = () => {
         <Container fluid>
             <Row>
                 <Col>
-                    <h1>Catálogo de productos de {fullName}</h1>
+                    <h1>Catálogo de productos de {user?.fullName || "Invitado"}</h1>
                 </Col>
             </Row>
             <Row>
