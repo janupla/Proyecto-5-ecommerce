@@ -40,7 +40,7 @@ export const PayPalButton = ({ currency, showSpinner, products, setOrderId, setS
                             currency_code: "USD",
                             value: Number(product.price * product.quantity).toString(),
                         },
-                        reference_id: product._id
+                        reference_id: product._id //agrega para que funcione paypal
                     }
                 })
                 return actions.order
