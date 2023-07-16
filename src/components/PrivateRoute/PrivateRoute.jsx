@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Spinner } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import UserContext from "../../contexts/user/UserContext.jsx";
+
 export default function PrivateRoute({ children }) {
     const userCtx = useContext(UserContext)
     const { authStatus, verifyingToken } = userCtx

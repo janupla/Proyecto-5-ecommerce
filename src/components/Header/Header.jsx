@@ -3,6 +3,7 @@ import { Badge, Button, Container, Nav, NavDropdown, Navbar } from 'react-bootst
 import ShoppingCartContext from "../../contexts/ShoppingCart/ShoppingCartContext.jsx"; //cambio nuevo
 import UserContext from '../../contexts/user/UserContext.jsx';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart.jsx';
+
 export const Header = () => {
     const userCtx = useContext(UserContext)
     const shoppingCartCtx = useContext(ShoppingCartContext) //trajimos la cajita

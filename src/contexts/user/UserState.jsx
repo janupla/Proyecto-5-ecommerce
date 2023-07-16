@@ -41,7 +41,7 @@ const UserState = (props) => {
     }
 
     const verifyingToken = async () => {
-        const token = localStorage.getItem('token')
+        const token = localStorage.getItem('token')  //método asincronico, se obtiene a través del localstorage
         if (token) {
             axiosClient.defaults.headers.common.Authorization = `Bearer ${token}`
         } else {
