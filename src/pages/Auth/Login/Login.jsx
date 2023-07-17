@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import UserContext from "../../../contexts/user/UserContext.jsx";
+import './login.css';
+
 export const Login = () => {
     const userCtx = useContext(UserContext)
     const { loginUser } = userCtx
@@ -25,7 +27,7 @@ export const Login = () => {
     }
 
     return (
-        <div>
+        <div className="container-login">
             <h1>Ingreso</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='email'>Correo</label>

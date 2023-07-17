@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { Badge, Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
-import ShoppingCartContext from "../../contexts/ShoppingCart/ShoppingCartContext.jsx";
+import ShoppingCartContext from '../../contexts/ShoppingCart/ShoppingCartContext.jsx';
 import UserContext from '../../contexts/user/UserContext.jsx';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart.jsx';
 
