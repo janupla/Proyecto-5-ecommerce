@@ -6,7 +6,6 @@ const shoppingCartReducer = (globalState, action) => {
     const { type, payload } = action //acciones , ojo c los cambios para q no se disparen tantas veces estas acciones
     switch (type) {
         case "AGREGAR_PRODUCTO":
-            console.log(globalState.products);
             const { product } = payload //extrae del payload el producto agregar
             let productsUpdated
             if (globalState.products) productsUpdated = [...globalState.products] //luego copia c los 3 puntitos el E°

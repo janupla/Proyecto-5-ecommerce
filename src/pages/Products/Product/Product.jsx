@@ -1,50 +1,39 @@
-import { useParams } from 'react-router-dom';
-import { ProductView } from '../../../components/ProductView/ProductView.jsx';
+import { useState, useEffect, useContext } from "react"
+import { useParams } from "react-router-dom"
+import { Col, Container, Row } from 'react-bootstrap'
+import { ProductView } from "../../../components/ProductView/ProductView.jsx"
+import axiosClient from "../../../config/axios.jsx"
+import UserContext from '../../../contexts/user/UserContext.jsx'
 
 export const Product = () => {
-    const products = [{
-        id: "1",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://falabella.scene7.com/is/image/Falabella/gsc_113648488_712232_1?wid=240&hei=240&qlt=70&fmt=webp"
-    }, {
-        id: "2",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
-    }, {
-        id: "3",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
-    }, {
-        id: "4",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
-    }, {
-        id: "5",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
-    }, {
-        id: "6",
-        title: "Producto 1",
-        description: "Descripcion",
-        price: 50444,
-        imageUrl: "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/productos-mas-vendidos-del-mundo.jpg"
-    }]
+  const userCtx = useContext( UserContext )
+  const { user } = userCtx
     const { productId } = useParams()
     // Llamar API para obtener un producto por id (/products/:id)
-    const product = products.find(product => product.id === productId)
+    const [ product, setProduct ] = useState( {} )
+    useEffect( () => {
+      const getProductFromDB = async () => {
+        const axiosRes = await axiosClient.get( `/products/${ productId }` )
+        setProduct( axiosRes.data )
+      }
+      try {
+        getProductFromDB()
+      } catch ( error ) {
+        console.error( error )
+      }
+    }, [] )
     return (
-        <ProductView className="mt-2" product={product}></ProductView>
+      <Container fluid>
+        <Row>
+          <Col>
+            <h1>Catálogo de productos de { user?.fullName || "invitado" }</h1>
+          </Col>
+        </Row>
+        <Row>
+          <ProductView className="mt-2" product={ product }></ProductView>
+        </Row>
+      </Container>
     )
-}
+  }
 
-export default Product
+  export default Product

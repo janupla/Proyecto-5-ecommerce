@@ -6,7 +6,7 @@ export const Profile = () => {
     const { user } = userCtx
     return (
         <div>
-            <h1>Profile</h1>
+            <h1>Mi Perfil</h1>
             <p>ID: {user._id}</p>
             <p>Nombre Completo: {user.fullName}</p>
             <p>Correo: {user.email}</p>

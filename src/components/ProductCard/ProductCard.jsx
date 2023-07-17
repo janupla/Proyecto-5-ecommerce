@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card} from 'react-bootstrap'
 import ShoppingCartContext from '../../contexts/ShoppingCart/ShoppingCartContext.jsx'
 
 export const ProductCard = ({ product, productViewPath }) => {
@@ -7,7 +7,7 @@ export const ProductCard = ({ product, productViewPath }) => {
     const { addProduct } = shoppingCartCtx //metodo auxiliar q permite agregar productos al carrito
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={product.imageUrl} />
+            <Card.Img variant="top" src={ product.imageURL } />
             <Card.Body>
                 <Card.Title className='text-center'>{product.title}</Card.Title>
                 <Card.Text className='text-center'>

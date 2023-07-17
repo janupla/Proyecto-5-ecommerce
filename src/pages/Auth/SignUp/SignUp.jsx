@@ -12,8 +12,9 @@ export const SignUp = () => {
 
     async function handleSubmit(event) {
         event.preventDefault()
+        console.log(formValues)
         await registerUser(formValues)
-        console.log(formValues);
+        
     }
 
     async function handleFormChange(event) {
