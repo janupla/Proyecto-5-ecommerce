@@ -1,4 +1,4 @@
-/* home.css */
+/* carrusel */
 
 .carrusel {
     margin-top: 20px;
@@ -29,4 +29,29 @@ h1 {
 .carousel-item img {
     max-height: 400px;
     object-fit: cover;
+}
+
+/* tarjetas.css */
+
+.tarjetas {
+    margin-top: 20px;
+}
+
+.tarjetas h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjetas .card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjetas .card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tarjetas .card-text {
+    font-size: 14px;
 }

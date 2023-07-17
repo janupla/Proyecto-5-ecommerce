@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { Button, Modal, Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import ShoppingCartContext from '../../contexts/ShoppingCart/ShoppingCartContext.jsx'
+import {ShoppingCartContext} from '../../contexts/ShoppingCart/ShoppingCartContext.jsx'
 
 export const ShoppingCart = ({ showShoppingCart, handleCloseShoppingCart }) => {
     const shoppingCartCtx = useContext(ShoppingCartContext) //contexto carrito, baúl contenedor
