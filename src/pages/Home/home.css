@@ -1,6 +1,32 @@
-.carrusel{
-    width: 200px;
-    height:450px;
+/* home.css */
 
+.carrusel {
+    margin-top: 20px;
+    text-align: center;
+}
 
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
 }
