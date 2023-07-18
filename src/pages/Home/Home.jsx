@@ -51,7 +51,7 @@ export function Home() {
                 <h2>LOS MÁS VENDIDOS</h2>
                 <Row>
                     <Col>
-                        <Card>
+                        <Card className="card-tarjeta">
                             <Card.Body>
                             <Card.Img variant="top" src="https://i.ibb.co/RpXCGgg/vendido1.png" />
                                 <Card.Title>Consola Nintendo Switch OLED Neón</Card.Title>
@@ -66,7 +66,7 @@ export function Home() {
                             <Card.Body>
                             <Card.Img variant="top" src="https://i.ibb.co/31WSwy1/vendido2.png" />
                                 <Card.Title>Consola Microsoft Xbox Series S 512GB Reacondicionada</Card.Title>
-                                <Card.Text>
+                                <Card.Text className='card-text'>
                                 Capacidad de Almacenamiento: 512 GB  con procesador Zen 2, además de entradas HDMI y núcleos del procesador Octa-Core.
                                 </Card.Text>
                             </Card.Body>

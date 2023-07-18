@@ -1,11 +1,16 @@
+/* Login.css */
+
 .container-login {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 40px auto;
+    /* Ajusta este margen para controlar la posición vertical */
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 40px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    
 }
 
 h1 {

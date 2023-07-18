@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { Button, Col, Container, Image, Row } from 'react-bootstrap'
 import ShoppingCartContext from '../../contexts/ShoppingCart/ShoppingCartContext.jsx'
+import './product-view.css';
 
 export const ProductView = ({ product }) => {
     const shoppingCartCtx = useContext(ShoppingCartContext)

@@ -55,3 +55,54 @@ h1 {
 .tarjetas .card-text {
     font-size: 14px;
 }
+
+/* tarjetas */
+
+.tarjetas {
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las filas de las tarjetas */
+.row {
+    justify-content: center;
+}
+
+/* Estilo para las columnas de las tarjetas */
+.col {
+    margin: 10px;
+}
+
+/* Estilo para las tarjetas */
+.card-tarjeta {
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card-img-top {
+    max-height: 200px;
+    /* Ajusta la altura máxima de la imagen */
+    object-fit: cover;
+    /* Ajusta el tamaño y recorte de la imagen */
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el texto de la tarjeta */
+.card-text {
+    text-align: center;
+    margin-bottom: 15px;
+    color: grey;
+    font-weight: bold;
+}

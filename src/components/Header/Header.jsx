@@ -24,7 +24,7 @@ export const Header = () => {
                             width="30"
                             height="30"
                             className="d-inline-block align-top"
-                        />Navbar scroll</Navbar.Brand>
+                        />Bienvenido a EcommerceOnline</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll" style={{ flexGrow: 0 }}>
                         <Nav

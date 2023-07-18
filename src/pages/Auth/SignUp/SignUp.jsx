@@ -1,5 +1,8 @@
 import { useContext, useState } from 'react';
 import UserContext from "../../../contexts/user/UserContext.jsx";
+import './signup.css';
+
+
 export const SignUp = () => {
     const userCtx = useContext(UserContext)
     const { registerUser } = userCtx
@@ -25,11 +28,11 @@ export const SignUp = () => {
     }
 
     return (
-        <div>
+        <div className='div-signup'>
             <h1>Registro</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='name'>Nombre</label>
-                <input id="name" name='name' type='text' value={formValues.name} onChange={handleFormChange}></input>
+            <form className='form-signup' onSubmit={handleSubmit}>
+                <label className='label-signup' htmlFor='name'>Nombre</label>
+                <input className='input-signup' id="name" name='name' type='text' value={formValues.name} onChange={handleFormChange}></input>
 
                 <label htmlFor='surname'>Apellido</label>
                 <input id="surname" name='surname' type='text' value={formValues.surname} onChange={handleFormChange}></input>
@@ -40,7 +43,7 @@ export const SignUp = () => {
                 <label htmlFor='password'>Contraseña</label>
                 <input id="password" name='password' type='password' value={formValues.password} onChange={handleFormChange}></input>
 
-                <button type='submit'>Registrarse</button>
+                <button className='button-signup' type='submit'>Registrarse</button>
             </form>
         </div>
     )

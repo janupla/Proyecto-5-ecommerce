@@ -1,0 +1,53 @@
+/* ProductCard.css */
+
+/* Estilo para el contenedor del producto */
+.card {
+    width: 18rem;
+    margin: 10px;
+    /* Espacio entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen del producto */
+.card-img-top {
+    height: 200px;
+    /* Ajusta la altura de la imagen según tus necesidades */
+    object-fit: cover;
+    /* Ajusta el tamaño y recorte de la imagen */
+}
+
+/* Estilo para el título del producto */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la descripción del producto */
+.card-text {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el precio del producto */
+.card-body .text-center:last-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estilo para los botones "Ver" y "Agregar" */
+.card-body .btn {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el botón "Agregar" */
+.card-body .btn-primary:last-child {
+    background-color: #4caf50;
+}
+
+/* Estilo para el botón "Agregar" en hover */
+.card-body .btn-primary:last-child:hover {
+    background-color: #45a049;
+}
